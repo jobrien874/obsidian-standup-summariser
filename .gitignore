@@ -1,0 +1,23 @@
+# Build outputs
+main.js
+main.js.map
+*.js.map
+dist/
+
+# Dependencies
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Package managers
+package-lock.json
+npm-debug.log*
+yarn.lock
+yarn-error.log*
+pnpm-lock.yaml

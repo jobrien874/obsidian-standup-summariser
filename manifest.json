@@ -1,0 +1,10 @@
+{
+"id": "stand-up-summariser",
+"name": "Stand Up Summariser (Claude)",
+"version": "0.1.0",
+"minAppVersion": "1.5.0",
+"description": "Creates stand-up summaries from notes and git commits throughout the day using Claude AI.",
+"author": "Josh O'Brien",
+"authorUrl": "https://github.com/jobrien874",
+"isDesktopOnly": true
+}
