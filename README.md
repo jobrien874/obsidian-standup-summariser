@@ -58,6 +58,8 @@ The plugin grabs:
 
 ### What You Get
 
+<img width="746" height="593" alt="image" src="https://github.com/user-attachments/assets/56e806fc-b1f4-4458-b155-1f8022836559" />
+
 Your summary will be saved as `YYYY-MM-DD - EOD Summary.md` in your Diary folder, and it'll include:
 
 - All your git commits, organized by project
