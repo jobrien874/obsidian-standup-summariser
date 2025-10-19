@@ -1,5 +1,8 @@
 # Stand Up Summariser (Claude)
 
+<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/c5f25e62-b13a-4b0c-b214-fcb21edbd830" />
+
+
 Ever get to the end of the day and think "wait, what did I even do today?" Yeah, me too.
 
 This Obsidian plugin is your personal work journal assistant. It looks at all the notes you edited today and the git commits you made across all your projects, then uses Claude AI to write you a nice summary of what you actually accomplished. Perfect for daily stand-ups, end-of-day reflections, or just remembering what the heck you were working on.
