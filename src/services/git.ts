@@ -25,7 +25,6 @@ export async function getGitCommitsFromRepo(
 
     return { repo: displayName, commits };
   } catch (error) {
-    console.log(`Git not available or not a git repository at: ${repoPath}`);
     return { repo: repoPath, commits: [] };
   }
 }

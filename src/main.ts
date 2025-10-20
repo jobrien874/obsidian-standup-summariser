@@ -10,7 +10,6 @@ export default class StandUpSummariserPlugin extends Plugin {
   settings: DiarySettings = DEFAULT_SETTINGS;
 
   async onload() {
-    console.log('Loading Stand Up Summariser Plugin');
     await this.loadSettings();
 
     this.addCommand({
@@ -29,7 +28,7 @@ export default class StandUpSummariserPlugin extends Plugin {
   }
 
   onunload() {
-    console.log('Unloading Stand Up Summariser Plugin');
+    // unloading plugin
   }
 
   async loadSettings() {

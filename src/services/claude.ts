@@ -19,20 +19,12 @@ export async function callClaudeAPI(
   apiKey: string,
   model: string
 ): Promise<string> {
-  logRequest(model, apiKey);
-
   const requestBody = buildRequestBody(model, context);
   const response = await sendRequest(apiKey, requestBody);
 
   handleErrorResponse(response, model);
 
   return extractTextFromResponse(response);
-}
-
-function logRequest(model: string, apiKey: string): void {
-  console.log('Calling Claude API with model:', model);
-  console.log('API Key present:', !!apiKey);
-  console.log('API Key length:', apiKey?.length);
 }
 
 function buildRequestBody(model: string, context: string) {
@@ -49,8 +41,6 @@ function buildRequestBody(model: string, context: string) {
 }
 
 async function sendRequest(apiKey: string, requestBody: any) {
-  console.log('Request body:', JSON.stringify(requestBody, null, 2).substring(0, 500));
-
   try {
     const response = await requestUrl({
       url: CLAUDE_API_URL,
@@ -63,10 +53,6 @@ async function sendRequest(apiKey: string, requestBody: any) {
       body: JSON.stringify(requestBody),
       throw: false,
     });
-
-    console.log('API response status:', response.status);
-    console.log('API response headers:', response.headers);
-    console.log('Full response object:', response);
 
     return response;
   } catch (error: any) {
@@ -106,8 +92,6 @@ function handleErrorResponse(response: any, model: string): void {
 
 function extractTextFromResponse(response: any): string {
   const data = response.json;
-  console.log('API response data:', JSON.stringify(data).substring(0, 200));
-
   if (!data.content || !Array.isArray(data.content)) {
     console.error('Invalid response structure:', data);
     throw new Error('Invalid response format from API');
